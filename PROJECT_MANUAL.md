@@ -111,7 +111,61 @@ Each extension must respect the project’s minimal, modular, and testable natur
 
 ---
 
-## 9. Final Notes
+
+## 9. Development Prerequisites
+
+Before running or contributing to **kaimose**, ensure your environment meets the following baseline requirements.
+
+**Core Requirements**
+
+| Component | Minimum Version | Purpose |
+|-----------|-----------------|---------|
+| **Node.js** | 18.x or higher | Runtime environment |
+| **npm** or **yarn**  | npm ≥ 9.x | Dependency Management |
+| **TypeScript** | 5.x | Static typing for scalability |
+| **tsx** | Latest | Direct execution of TypeScript without precompilation |
+| **Docker** | Optional | Containerized runtime parity |
+| **Git** | Required | Version control and CI/CD integration |
+
+
+**Installation**
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/adrian-castro-vazquez/kaimose.git
+cd kaimose
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3.	Run the project in development mode
+
+```bash
+npm run start
+```
+
+4.	(Optional) Build TypeScript sources
+
+```bash
+npm run build
+```
+
+**Notes**
+
+- The project uses **ES Modules** (`“type”: “module”` in `package.json`).
+- The **CLI** entry point is located at `src/cli/main.ts`.
+- Ensure your IDE supports **TypeScript** and **ESLint** integration.
+- **Docker** is not required for local testing but ensures consistency across environments.
+- **CI/CD** validation uses GitHub Actions with lint, test, and build stages.
+
+---
+
+## 10. Final Notes
 
 This manual serves as a persistent technical memory of **kaimose**.
 It is continuously updated as the project evolves, preserving the rationale behind every major decision.
